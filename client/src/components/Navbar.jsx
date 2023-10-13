@@ -39,7 +39,6 @@ function Navbar() {
               </Link>
               <Link to={'/add-categories'}
                 className="nav-item nav-link active"
-                href="/add-category"
                 aria-current="page"
               >
                 Category
