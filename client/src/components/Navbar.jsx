@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -29,20 +30,20 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarCollapse">
             {/* Nav */}
             <div className="navbar-nav mx-lg-auto">
-              <a
+              <Link to= {'/'}
                 className="nav-item nav-link active"
-                href="/"
+                
                 aria-current="page"
               >
                 Home
-              </a>
-              <a
+              </Link>
+              <Link to={'/add-categories'}
                 className="nav-item nav-link active"
                 href="/add-category"
                 aria-current="page"
               >
                 Category
-              </a>
+              </Link>
               <a
                 className="nav-item nav-link active"
                 href="/add-sub_category"

@@ -19,7 +19,8 @@ function AddProduct() {
 
   const [categories, setCategories] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:4000/save/view-category")
+    // axios.get("http://localhost:4000/save/view-category")
+    axios.get("https://productlist-04vn.onrender.com/save/view-category")
       .then((res) => {
         setCategories(res.data.data);
         console.log(res);
@@ -32,7 +33,8 @@ function AddProduct() {
   const [subCategories, setSubCategories] = useState([]);
   useEffect(() => {
     if (data.category) {
-      axios.get(`http://localhost:4000/save/view-sub_category/${data.category}`)
+      // axios.get(`http://localhost:4000/save/view-sub_category/${data.category}`)
+      axios.get(`https://productlist-04vn.onrender.com/save/view-sub_category/${data.category}`)
         .then((res) => {
           setSubCategories(res.data.data);
           console.log(res);
@@ -46,7 +48,8 @@ function AddProduct() {
   const validate = (event) => {
     event.preventDefault();
     console.log("datas", data);
-    axios.post("http://localhost:4000/save/add-product", data)
+    axios.post("https://productlist-04vn.onrender.com/save/add-product", data)
+    // axios.post("http://localhost:4000/save/add-product", data)
       .then((res) => {
         swal(res.data.message);
       })

@@ -14,7 +14,8 @@ function AddSubCategory() {
 
 const [category, setcategory] = useState([])
 useEffect(()=>{
-    axios.get('http://localhost:4000/save/view-category').then((res)=>{
+    // axios.get('http://localhost:4000/save/view-category').then((res)=>{
+    axios.get('hhttps://productlist-04vn.onrender.com/save/view-category').then((res)=>{
         console.log(res)
         setcategory(res.data.data);
     })
@@ -28,7 +29,8 @@ useEffect(()=>{
   const validate = (event) => {
     event.preventDefault()
     console.log("datas", data);
-    axios.post('http://localhost:4000/save/add-sub_category', data).then((res) => {
+    // axios.post('http://localhost:4000/save/add-sub_category', data).then((res) => {
+    axios.post('https://productlist-04vn.onrender.com/save/add-sub_category', data).then((res) => {
       console.log("res", res);
       swal(res.data.message)
     });

@@ -15,7 +15,8 @@ function AddCategory() {
   const validate = (e) => {
     e.preventDefault()
     console.log("datas", data);
-    axios.post("http://localhost:4000/save/add-category", data).then((res) => {
+    // axios.post("http://localhost:4000/save/add-category", data).then((res) => {
+    axios.post("https://productlist-04vn.onrender.com/save/add-category", data).then((res) => {
       console.log("res", res);
       swal(res.data.message)
     });
