@@ -37,26 +37,25 @@ function Navbar() {
               >
                 Home
               </Link>
-              <Link to={'/add-categories'}
+              <Link to={'/add-category'}
                 className="nav-item nav-link active"
                 aria-current="page"
               >
                 Category
               </Link>
-              <a
+              <Link to={"/add-sub_category"}
                 className="nav-item nav-link active"
-                href="/add-sub_category"
+               
                 aria-current="page"
               >
                 Sub Category
-              </a>
-              <a
+              </Link>
+              <Link to={"/add-product"}
                 className="nav-item nav-link active"
-                href="/add-product"
                 aria-current="page"
               >
                 Product
-              </a>
+              </Link>
               
 
               
