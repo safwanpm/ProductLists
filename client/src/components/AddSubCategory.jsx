@@ -15,7 +15,7 @@ function AddSubCategory() {
 const [category, setcategory] = useState([])
 useEffect(()=>{
     // axios.get('http://localhost:4000/save/view-category').then((res)=>{
-    axios.get('hhttps://productlist-04vn.onrender.com/save/view-category').then((res)=>{
+    axios.get('https://productlist-04vn.onrender.com/save/view-category').then((res)=>{
         console.log(res)
         setcategory(res.data.data);
     })
